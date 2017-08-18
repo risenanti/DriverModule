@@ -5,7 +5,7 @@ obj-m := hello.o
 # Otherwise we were called directly from the command line.
 # Invoke the kernel build system.
   else
-    KERNEL_SOURCE := /usr/src/linux-headers-3.16.0-38-generic
+    KERNEL_SOURCE := /lib/modules/4.10.0-32-generic/build
     PWD := $(shell pwd)
 default:
 	${MAKE} -C ${KERNEL_SOURCE} SUBDIRS=${PWD} modules
